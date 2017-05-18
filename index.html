@@ -29,10 +29,6 @@
             padding: 5px;
         }
 
-        .card-header>i {
-            padding-left: 5px;
-        }
-
         .card-block {
             padding: 10px;
         }
@@ -42,19 +38,14 @@
             font-size: smaller;
         }
 
-        fieldset.col,
-        fieldset.col-4 {
+        fieldset.col {
             padding-left: 15px;
             padding-right: 15px;
             margin-bottom: 0;
         }
 
         .card {
-            min-height: 350px;
-        }
-
-        .breadcrumb {
-            height: 47px;
+            min-height: 330px;
         }
 
         ul.nav.nav-tabs {
@@ -75,9 +66,11 @@
             padding-right: 0;
         }
 
-        .rqo-page-header-actions {
-            padding-top: 10px;
-            padding-right: 5px;
+        .rqo-page-header-actions .btn-group {
+            /*padding-top: 10px;
+            padding-right: 5px;*/
+            height: 47px;
+            /*border-bottom: 0;*/
         }
 
         .rqo-page-header .nav-item .nav-link {
@@ -106,8 +99,9 @@
             background: rgb(255, 248, 230);
             border-bottom: 1px solid #dbdee0;
             font-size: smaller;
-            height: 47px;
-            padding-top: 5px;
+            min-height: 47px;
+            padding: 5px;
+            white-space: nowrap;
         }
         /*.rqo-page-header > div > ul > li:nth-child(1) > a{
             border-left: 0;
@@ -117,11 +111,17 @@
         select.form-control.form-control-sm {
             height: 25px !important;
             font-size: smaller;
+            font-weight: lighter;
         }
-        /*fieldset {
-            margin-bottom: 0;
-        }*/
-        /*button.btn.btn-sm {min-width: 95px;}*/
+
+        .action-btn {
+            /*min-width: 80px;*/
+            font-size: smaller;            
+        }
+
+        .panel-btn {
+            font-size: smaller;            
+        }
     </style>
 
 </head>
@@ -517,46 +517,63 @@
                     </ul>
                 </div>
                 <div class="rqo-page-header-actions">
-                    <div class="btn-group hidden-md-down" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-sm btn-secondary"><i class="fa fa-save"></i> Save</button>
-                        <button type="button" class="btn btn-sm btn-secondary"><i class="fa fa-cog"></i> CM</button>
-                        <button type="button" class="btn btn-sm btn-secondary"><i class="fa fa-magic"></i> Template</button>
-                        <button type="button" class="btn btn-sm btn-secondary"><i class="fa fa-refresh"></i> Hud</button>
-                        <button type="button" class="btn btn-sm btn-secondary"><i class="fa fa-list-alt"></i> Audit</button>
-                    </div>
-                    <div class="btn-group hidden-lg-up" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-sm btn-secondary"><i class="fa fa-save"></i></button>
-                        <button type="button" class="btn btn-sm btn-secondary"><i class="fa fa-cog"></i></button>
-                        <button type="button" class="btn btn-sm btn-secondary"><i class="fa fa-magic"></i></button>
-                        <button type="button" class="btn btn-sm btn-secondary"><i class="fa fa-refresh"></i></button>
-                        <button type="button" class="btn btn-sm btn-secondary"><i class="fa fa-list-alt"></i></button>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-sm btn-secondary action-btn"><i class="fa fa-save"></i><span class="hidden-md-down"> Save</span></button>
+                        <button type="button" class="btn btn-sm btn-secondary action-btn "><i class="fa fa-bank"></i><span class="hidden-md-down"> CM</span></button>
+                        <button type="button" class="btn btn-sm btn-secondary action-btn "><i class="fa fa-magic"></i><span class="hidden-md-down"> Template</span></button>
+                        <button type="button" class="btn btn-sm btn-secondary action-btn "><i class="fa fa-refresh"></i><span class="hidden-md-down"> HUD</span></button>
+                        <button type="button" class="btn btn-sm btn-secondary action-btn "><i class="fa fa-list-alt"></i><span class="hidden-md-down"> Audit</span></button>
                     </div>
                 </div>
             </div>
 
             <div class="page-summary">
                 <div class="row">
-                    <div class="col pr-0"><span class="pull-right text-muted">File No :</span></div>
-                    <div class="col pl-1"><span class=""> 123456789</span></div>
-                    <div class="col pr-0"><span class="pull-right text-muted">Buyer :</span></div>
-                    <div class="col pl-1"><span class=""> Biff Tanner</span></div>
-                    <div class="col pr-0"><span class="pull-right text-muted">Region :</span></div>
-                    <div class="col pl-1"><span class=""> 0 - Admin Region</span></div>
-                    <div class="w-100"></div>
-                    <div class="col pr-0"><span class="pull-right text-muted">Property :</span></div>
-                    <div class="col pl-1"><span class=""> 100 Fine Way Plano, TX 75033</span></div>
-                    <div class="col pr-0"><span class="pull-right text-muted">Seller :</span></div>
-                    <div class="col pl-1"><span class=""> Calvin Klein</span></div>
-                    <div class="col pr-0"><span class="pull-right text-muted">Branch :</span></div>
-                    <div class="col pl-1"><span class=""> Accounting</span></div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="row">
+                            <div class="col-6 col-md-3"><span class="text-muted pull-right">File No :</span></div>
+                            <div class="col-6 col-md-9 pl-0">123456789</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="row">
+                            <div class="col-6 col-md-3"><span class="text-muted pull-right">Buyer :</span></div>
+                            <div class="col-6 col-md-9 pl-0">Biff Tanner</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="row">
+                            <div class="col-6 col-md-3"><span class="text-muted pull-right">Region :</span></div>
+                            <div class="col-6 col-md-9 pl-0">01 - Admin</div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="row">
+                            <div class="col-6 col-md-3"><span class="text-muted pull-right">Property :</span></div>
+                            <div class="col-6 col-md-9 pl-0">100 East Main St Frisco, TX 75033</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="row">
+                            <div class="col-6 col-md-3"><span class="text-muted pull-right">Seller :</span></div>
+                            <div class="col-6 col-md-9 pl-0">Calvin Klein</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="row">
+                            <div class="col-6 col-md-3"><span class="text-muted pull-right">Branch :</span></div>
+                            <div class="col-6 col-md-9 pl-0">02 - Accounting</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="container-fluid">
-                <div class="row row-eq-height">
-                    <div class="col-9 pl-0 pr-0">
+                <div class="row">
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                         <div class="card">
-                            <div class="card-header"><i class="fa fa-file"></i> File Details</div>
+                            <div class="card-header"> File Details</div>
                             <div class="card-block">
                                 <div class="row">
                                     <!--status-->
@@ -713,8 +730,13 @@
 
                                     <div class="w-100"></div>
 
+                                    <!--other company's file number-->
+                                    <fieldset class="col col-4 form-group">
+                                        <label for="other_file_number">Reference Number</label>
+                                        <input type="text" class="form-control form-control-sm" id="other_file_number" placeholder="Reference Number ">
+                                    </fieldset>
 
-                                    <fieldset class="col offset-4 form-group ">
+                                    <fieldset class="col form-group ">
                                         <label for="place_of_closing">Place of Closing</label>
                                         <div class="input-group input-group-sm ">
                                             <input type="text " class="form-control form-control-sm " id="place_of_closing" placeholder="Place of Closing ">
@@ -722,72 +744,104 @@
                                         </div>
                                     </fieldset>
 
-                                    <!--other company's file number-->
-                                    <fieldset class="col-4 form-group">
-                                        <label for="other_file_number">Reference Number</label>
-                                        <input type="text" class="form-control form-control-sm" id="other_file_number" placeholder="Reference Number ">
-                                    </fieldset>
-
-                                    <div class="w-100"></div <!--settlement agent-->
-                                    <fieldset class="col col-4 offset-4 form-group">
-                                        <label for="settlement_agent">Settlement Agent</label>
-                                        <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control form-control-sm" id="settlement_agent" placeholder="Settlement Agent">
-                                            <button class="input-group-addon input-group-addon-sm text-center"><i style="padding-left: 4px;" class="fa fa-binoculars" aria-hidden="true"></i></button>
-                                        </div>
-                                    </fieldset>
+                                    <div class="w-100"></div>
 
                                     <!--friendly name-->
                                     <fieldset class="col col-4 form-group ">
                                         <label for="friendly_name">Friendly Name</label>
                                         <input type="text " class="form-control form-control-sm " id="friendly_name" placeholder="Friendly Name ">
                                     </fieldset>
+
+                                    <!--settlement agent-->
+                                    <fieldset class="col form-group">
+                                        <label for="settlement_agent">Settlement Agent</label>
+                                        <div class="input-group input-group-sm">
+                                            <input type="text" class="form-control form-control-sm" id="settlement_agent" placeholder="Settlement Agent">
+                                            <button class="input-group-addon input-group-addon-sm text-center"><i style="padding-left: 4px;" class="fa fa-binoculars" aria-hidden="true"></i></button>
+                                        </div>
+                                    </fieldset>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-3 pl-1 pr-0">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                         <div class="card">
-                            <div class="card-header"><i class="fa fa-calendar"></i> Critical Dates</div>
+                            <div class="card-header"> Critical Dates</div>
                             <div class="card-block">
-                                <fieldset class="form-group mb-0">
-                                    <label for="date1">Title Due</label>
+                                <div class="row">
+                                    <fieldset class="col col-12 form-group mb-0">
+                                        <label for="date1">Title Due</label>
+                                        <input type="text" class="form-control form-control-sm" id="settlement_agent" placeholder="Title Due">
+                                    </fieldset>
+                                    <fieldset class="col col-12 form-group mb-0">
+                                        <label for="date1">Close Date</label>
+                                        <input type="text" class="form-control form-control-sm" id="settlement_agent" placeholder="Close Date">
+                                    </fieldset>
+                                    <fieldset class="col col-12 form-group mb-0">
+                                        <label for="date1">Close Time</label>
+                                        <input type="text" class="form-control form-control-sm" id="settlement_agent" placeholder="Close Date">
+                                    </fieldset>
+                                    <fieldset class="col col-12 form-group mb-0">
+                                        <label for="date1">Duration</label>
+                                        <input type="text" class="form-control form-control-sm" id="settlement_agent" placeholder="Duration">
+                                    </fieldset>
+                                    <fieldset class="col col-12 form-group mb-0">
+                                        <label for="date1">Cancelled</label>
+                                        <input type="text" class="form-control form-control-sm" id="settlement_agent" placeholder="Cancelled">
+                                    </fieldset>
+                                    <fieldset class="col col-12 form-group">
+                                        <label for="date1">Fund Date</label>
+                                        <input type="text" class="form-control form-control-sm" id="settlement_agent" placeholder="Fund Date">
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                    <input type="text" class="form-control form-control-sm" id="settlement_agent" placeholder="Title Due">
-
-                                </fieldset>
-                                <fieldset class="form-group mb-0">
-                                    <label for="date1">Close Date</label>
-
-                                    <input type="text" class="form-control form-control-sm" id="settlement_agent" placeholder="Close Date">
-
-                                </fieldset>
-                                 <fieldset class="form-group mb-0">
-                                    <label for="date1">Close Time</label>
-
-                                    <input type="text" class="form-control form-control-sm" id="settlement_agent" placeholder="Close Date">
-
-                                </fieldset>
-                                <fieldset class="form-group mb-0">
-                                    <label for="date1">Duration</label>
-
-                                    <input type="text" class="form-control form-control-sm" id="settlement_agent" placeholder="Duration">
-
-                                </fieldset>
-                                <fieldset class="form-group mb-0">
-                                    <label for="date1">Cancelled</label>
-
-                                    <input type="text" class="form-control form-control-sm" id="settlement_agent" placeholder="Cancelled">
-
-                                </fieldset>
-                            
-                                <fieldset class="form-group">
-                                    <label for="date1">Fund Date</label>
-
-                                    <input type="text" class="form-control form-control-sm" id="settlement_agent" placeholder="Settlement Agent">
-
-                                </fieldset>
-
+                <div class="row row-eq-height">
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <span> Notes</span>
+                                <!--<div class="btn-group pull-right" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-sm btn-secondary panel-btn"><i class="fa fa-plus"></i><span> Add</span></button>                        
+                                </div>-->
+                            </div>
+                            <div class="card-block">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div class="card">
+                            <div class="card-header"> Staff</div>
+                            <div class="card-block">
+                                <div class="row">
+                                    <fieldset class="col col-12 form-group mb-0">
+                                        <label for="sales-representative">Sales Representative</label>
+                                        <select type="text" class="form-control form-control-sm" id="sales-representative" placeholder="Sales Representative"></select>
+                                    </fieldset>
+                                    <fieldset class="col col-12 form-group mb-0">
+                                        <label for="closing-agent">Closing Agent</label>
+                                        <select type="text" class="form-control form-control-sm" id="closing-agent" placeholder="Sales Representative"></select>
+                                    </fieldset>
+                                    <fieldset class="col col-12 form-group mb-0">
+                                        <label for="escrow-officer">Escrow Officer</label>
+                                        <select type="text" class="form-control form-control-sm" id="escrow-officer" placeholder="Escrow Officer"></select>
+                                    </fieldset>
+                                    <fieldset class="col col-12 form-group mb-0">
+                                        <label for="escrow-processor">Escrow Processor</label>
+                                        <select type="text" class="form-control form-control-sm" id="escrow-processor" placeholder="Escrow Processor"></select>
+                                    </fieldset>
+                                    <fieldset class="col col-12 form-group mb-0">
+                                        <label for="title-officer">Title Officer</label>
+                                        <select type="text" class="form-control form-control-sm" id="title-officer" placeholder="Title Officer"></select>
+                                    </fieldset>
+                                    <fieldset class="col col-12 form-group mb-0">
+                                        <label for="title-processor">Title Processor</label>
+                                        <select type="text" class="form-control form-control-sm" id="title-processor" placeholder="Title Processor"></select>
+                                    </fieldset>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1097,9 +1151,8 @@
     </footer>
 
     <!-- Bootstrap and necessary plugins -->
-    <script src="bower_components/jquery/dist/jquery.min.js "></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js "></script>
-
+    <script src="js/jquery.min.js "></script>
+    <script src="js/bootstrap.min.js "></script>
 
     <script src="js/app.js "></script>
 
