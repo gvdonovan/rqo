@@ -33,12 +33,9 @@
 
 // Components
 @import "bootstrap_src/transitions";
-
 @import "bootstrap_src/dropdown";
 @import "bootstrap_custom/dropdown";
-
 @import "bootstrap_src/button-group";
-
 @import "bootstrap_src/input-group";
 @import "bootstrap_custom/input-group";
 
@@ -84,7 +81,7 @@
 @import "bootstrap_src/utilities";
 
 // Vendors Styles
-@import "vendors/vendors";
+// @import "vendors/vendors";
 
 // CoreUI Styles
 // Additional typography
@@ -120,4 +117,4 @@
 @import "custom";
 
 // UI Kits
-@import "uikits/uikits";
+//@import "uikits/uikits";   

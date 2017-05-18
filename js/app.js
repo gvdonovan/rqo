@@ -88,7 +88,7 @@ $(document).ready(function ($) {
   $('.navbar-toggler').click(function () {
 
     if ($(this).hasClass('sidebar-toggler')) {
-      $('body').toggleClass('sidebar-compact');
+      $('body').toggleClass('sidebar-hidden');
       resizeBroadcast();
     }
 

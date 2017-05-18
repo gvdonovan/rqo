@@ -111,7 +111,10 @@ $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
 // Reassign color vars to semantic color scheme
-$brand-primary:             $blue !default;
+// gd begin
+// $brand-primary:             $blue !default;
+$brand-primary:             $gray-dark !default;
+// gd end
 $brand-success:             $green !default;
 $brand-info:                $teal !default;
 $brand-warning:             $orange !default;
@@ -428,8 +431,11 @@ $input-border-radius:            $border-radius !default;
 $input-border-radius-lg:         $border-radius-lg !default;
 $input-border-radius-sm:         $border-radius-sm !default;
 
+// gd begin
 $input-bg-focus:                 $input-bg !default;
-$input-border-focus:             lighten($brand-primary, 25%) !default;
+// $input-border-focus:             lighten($brand-primary, 25%) !default;
+$input-border-focus:             lighten($gray-dark, 25%) !default;
+// gd end
 $input-box-shadow-focus:         $input-box-shadow, rgba($input-border-focus, .6) !default;
 $input-color-focus:              $input-color !default;
 

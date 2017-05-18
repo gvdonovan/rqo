@@ -4,8 +4,8 @@
 //
 // Grayscale and brand colors for use across Bootstrap.
 
-// $gray-dark:                 #34383c;#59326D
-$gray-dark:                 #59326D;
+// $gray-dark:                 #34383c;
+ $gray-dark:                 #59326D;
 $gray:                      #9fabb8;
 $gray-light:                #dbdee0;
 $gray-lighter:              #e9ebec;
@@ -100,7 +100,6 @@ $progress-bg:                    darken($gray-lightest,1%);
 // Forms
 
 $input-border-color:             $gray-lighter;
-
 
 // Dropdowns
 //
