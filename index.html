@@ -130,13 +130,13 @@
 
     <!--header-->
     <header class="app-header navbar">
-        <button class="navbar-toggler mobile-sidebar-toggler hidden-lg-up" type="button">☰</button>
+        <button class="navbar-toggler mobile-sidebar-toggler hidden-lg-up" type="button">☰2</button>
         <a class="navbar-brand" href="#">
             <img src="img/rqo-logo-white.png" style="height: 30px;" class="m-t-1">
-        </a>
-        <ul class="nav navbar-nav hidden-md-down float-left">
+        </a>                
+        <ul class="nav navbar-nav hidden-md-down">
             <li class="nav-item">
-                <a class="nav-link navbar-toggler sidebar-toggler" href="#">☰</a>
+                <a class="nav-link navbar-toggler sidebar-toggler" href="#">☰1</a>
             </li>
         </ul>
         <!--search form-->
@@ -493,11 +493,11 @@
         <main class="main">
 
             <div class="d-flex flex-row justify-content-between rqo-page-header">
-                <div class="col rqo-page-header-tabs pl-0 hidden-sm-down">
+                <div class="col rqo-page-header-tabs pl-0 hidden-xs-down">
 
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link border-left-0 active" data-toggle="tab" href="#home" role="tab" aria-controls="home">File Main</a>
+                            <a class="nav-link border-left-0 active" data-toggle="tab" href="#home" role="tab" aria-controls="home">File</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Buyer</a>
@@ -509,7 +509,7 @@
                             <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Sale/Loan</a>
+                            <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Sale</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Property</a>
@@ -526,50 +526,52 @@
                     </div>
                 </div>
             </div>
-
-            <div class="page-summary">
+            
+            <!--summary-->
+            <div class="page-summary hidden-xs-down">
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="row">
-                            <div class="col-6 col-md-3"><span class="text-muted pull-right">File No :</span></div>
+                            <div class="col-6 col-md-3"><span class="text-muted">File No :</span></div>
                             <div class="col-6 col-md-9 pl-0">123456789</div>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="row">
-                            <div class="col-6 col-md-3"><span class="text-muted pull-right">Buyer :</span></div>
+                            <div class="col-6 col-md-3"><span class="text-muted">Buyer :</span></div>
                             <div class="col-6 col-md-9 pl-0">Biff Tanner</div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-sm-12 col-md-6 col-lg-4 hidden-sm-down">
                         <div class="row">
-                            <div class="col-6 col-md-3"><span class="text-muted pull-right">Region :</span></div>
+                            <div class="col-6 col-md-3"><span class="text-muted">Region :</span></div>
                             <div class="col-6 col-md-9 pl-0">01 - Admin</div>
                         </div>
                     </div>
 
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="row">
-                            <div class="col-6 col-md-3"><span class="text-muted pull-right">Property :</span></div>
+                            <div class="col-6 col-md-3"><span class="text-muted">Property :</span></div>
                             <div class="col-6 col-md-9 pl-0">100 East Main St Frisco, TX 75033</div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-sm-12 col-md-6 col-lg-4 hidden-sm-down">
                         <div class="row">
-                            <div class="col-6 col-md-3"><span class="text-muted pull-right">Seller :</span></div>
+                            <div class="col-6 col-md-3"><span class="text-muted">Seller :</span></div>
                             <div class="col-6 col-md-9 pl-0">Calvin Klein</div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-sm-12 col-md-6 col-lg-4 hidden-sm-down">
                         <div class="row">
-                            <div class="col-6 col-md-3"><span class="text-muted pull-right">Branch :</span></div>
+                            <div class="col-6 col-md-3"><span class="text-muted">Branch :</span></div>
                             <div class="col-6 col-md-9 pl-0">02 - Accounting</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="container-fluid">
+            <div class="container-fluid">                
+
                 <div class="row">
                     <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                         <div class="card">
@@ -577,7 +579,7 @@
                             <div class="card-block">
                                 <div class="row">
                                     <!--status-->
-                                    <fieldset class="col form-group">
+                                    <fieldset class="col-lg-4 col-md-4 col-sm-6 col-xs-12 form-group mb-0">
                                         <label for="status">Status</label>
                                         <select class="form-control form-control-sm">
                                             <option selected="" disabled="">Make a selection...</option>
@@ -593,7 +595,7 @@
                                     </fieldset>
 
                                     <!--escrow unit-->
-                                    <fieldset class="col form-group">
+                                    <fieldset class="col-lg-4 col-md-4 col-sm-6 col-xs-12 form-group mb-0">
                                         <label for="escrow_unit">Escrow Unit</label>
                                         <select id="escrow_unit" class="form-control form-control-sm">
                                         <option selected="" disabled="">Make a selection...</option>
@@ -604,7 +606,7 @@
                                     </fieldset>
 
                                     <!--service-->
-                                    <fieldset class="col form-group">
+                                    <fieldset class="col-lg-4 col-md-4 col-sm-6 col-xs-12 form-group mb-0">
                                         <label for="service">Service</label>
                                         <select id="service" class="form-control form-control-sm">
                                         <option selected="" disabled="">Make a selection...</option>
@@ -613,11 +615,10 @@
                                         <option value="3">Option 2</option>                                        
                                     </select>
                                     </fieldset>
-
-                                    <div class="w-100"></div>
+                                    
 
                                     <!--process template-->
-                                    <fieldset class="col form-group">
+                                    <fieldset class="col-lg-4 col-md-4 col-sm-6 col-xs-12 form-group mb-0">
                                         <label for="process_template">Process Template</label>
                                         <select class="form-control form-control-sm">
                                         <option selected="" disabled="">Make a selection...</option>
@@ -632,7 +633,7 @@
                                     </fieldset>
 
                                     <!--title unit-->
-                                    <fieldset class="col form-group">
+                                    <fieldset class="lg-4 col-md-4 col-sm-6 col-xs-12 form-group mb-0">
                                         <label for="title_unit">Title Unit</label>
                                         <select id="title_unit" class="form-control form-control-sm">
                                         <option selected="" disabled="">Make a selection...</option>
@@ -643,7 +644,7 @@
                                     </fieldset>
 
                                     <!--kind of order-->
-                                    <fieldset class="col form-group">
+                                    <fieldset class="col-lg-4 col-md-4 col-sm-6 col-xs-12 form-group mb-0">
                                         <label for="kind_of_order">Kind of Order</label>
                                         <select id="kind_of_order" class="form-control form-control-sm">
                                         <option selected="" disabled="">Make a selection...</option>
@@ -653,10 +654,10 @@
                                     </select>
                                     </fieldset>
 
-                                    <div class="w-100"></div>
+                                    <!--<div class="w-100"></div>-->
 
                                     <!--title company-->
-                                    <fieldset class="col form-group">
+                                    <fieldset class="col-lg-4 col-md-4 col-sm-6 col-xs-12 form-group mb-0">
                                         <label for="title_company">Title Company</label>
                                         <select id="title_company" class="form-control form-control-sm">
                                         <option selected="" disabled="">Make a selection...</option>
@@ -667,7 +668,7 @@
                                     </fieldset>
 
                                     <!--order cateory-->
-                                    <fieldset class="col form-group">
+                                    <fieldset class="col-lg-4 col-md-4 col-sm-6 col-xs-12 form-group mb-0">
                                         <label for="order_category">Order Category</label>
                                         <select id="order_category" class="form-control form-control-sm">
                                         <option selected="" disabled="">Make a selection...</option>
@@ -678,7 +679,7 @@
                                     </fieldset>
 
                                     <!--source of business-->
-                                    <fieldset class="col form-group">
+                                    <fieldset class="col-lg-4 col-md-4 col-sm-6 col-xs-12 form-group mb-0">
                                         <label for="source_of_business">Source of Business</label>
                                         <select id="source_of_business" class="form-control form-control-sm">
                                         <option selected="" disabled="">Make a selection...</option>
@@ -688,11 +689,10 @@
                                     </select>
                                     </fieldset>
 
-
-                                    <div class="w-100"></div>
+                                    <!--<div class="w-100"></div>-->
 
                                     <!--escrow account-->
-                                    <fieldset class="col form-group">
+                                    <fieldset class="col-lg-4 col-md-4 col-sm-6 col-xs-12 form-group mb-0">
                                         <label for="escrow_account">Escrow Account</label>
                                         <select id="escrow_account" class="form-control form-control-sm">
                                         <option selected="" disabled="">Make a selection...</option>
@@ -703,7 +703,7 @@
                                     </fieldset>
 
                                     <!--underwriter-->
-                                    <fieldset class="col form-group">
+                                    <fieldset class="col-lg-4 col-md-4 col-sm-6 col-xs-12 form-group mb-0">
                                         <label for="underwriter">Underwriter</label>
                                         <select id="underwriter" class="form-control form-control-sm">
                                         <option selected="" disabled="">Make a selection...</option>
@@ -713,7 +713,7 @@
                                     </fieldset>
 
                                     <!--location-->
-                                    <fieldset class="col form-group">
+                                    <fieldset class="col-lg-4 col-md-4 col-sm-6 col-xs-12 form-group mb-0">
                                         <label for="location">Location</label>
                                         <select class="form-control form-control-sm" id="location">
                                         <option selected=" " disabled=" ">Make a selection...</option>
@@ -731,12 +731,12 @@
                                     <div class="w-100"></div>
 
                                     <!--other company's file number-->
-                                    <fieldset class="col col-4 form-group">
+                                    <fieldset class="col-lg-4 col-md-4 col-sm-6 col-xs-12 form-group mb-0">
                                         <label for="other_file_number">Reference Number</label>
                                         <input type="text" class="form-control form-control-sm" id="other_file_number" placeholder="Reference Number ">
                                     </fieldset>
 
-                                    <fieldset class="col form-group ">
+                                    <fieldset class="col-lg-8 col-md-8 col-sm-6 col-xs-12 form-group mb-0">
                                         <label for="place_of_closing">Place of Closing</label>
                                         <div class="input-group input-group-sm ">
                                             <input type="text " class="form-control form-control-sm " id="place_of_closing" placeholder="Place of Closing ">
@@ -744,16 +744,16 @@
                                         </div>
                                     </fieldset>
 
-                                    <div class="w-100"></div>
+                                    <!--<div class="w-100"></div>-->
 
                                     <!--friendly name-->
-                                    <fieldset class="col col-4 form-group ">
+                                    <fieldset class="col-lg-4 col-md-4 col-sm-6 col-xs-12 form-group mb-0">
                                         <label for="friendly_name">Friendly Name</label>
                                         <input type="text " class="form-control form-control-sm " id="friendly_name" placeholder="Friendly Name ">
                                     </fieldset>
 
                                     <!--settlement agent-->
-                                    <fieldset class="col form-group">
+                                    <fieldset class="col-lg-8 col-md-8 col-sm-6 col-xs-12 form-group mb-0">
                                         <label for="settlement_agent">Settlement Agent</label>
                                         <div class="input-group input-group-sm">
                                             <input type="text" class="form-control form-control-sm" id="settlement_agent" placeholder="Settlement Agent">
