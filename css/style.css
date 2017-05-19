@@ -2761,9 +2761,10 @@ header.navbar {
     padding: 0.5rem 1rem;
     margin-right: 0;
     background-color: #59326D;
+    background-image: url("../img/rqo-logo-white.png");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 90px auto;
+    background-size: 200px auto;
     border-bottom: 1px solid #3c224a; }
   header.navbar .navbar-nav {
     flex-direction: row;

@@ -31,7 +31,7 @@ $behance: #1769ff;
 $dropbox: #007ee5;
 $reddit: #ff4500;
 $spotify: #7ab800;
-$vine: #00bf8f;
+$vine: #00bf8f;    
 $foursquare: #1073af;
 $vimeo: #aad450;
 
@@ -47,10 +47,10 @@ $navbar-border: (
     )
 );
 $navbar-brand-width:                220px;
-// $navbar-brand-bg:                   darken($gray-dark,10%);
+//$navbar-brand-bg:                   darken($gray-dark,10%);
 $navbar-brand-bg:                   $gray-dark;
 $navbar-brand-logo:                 url('../img/rqo-logo-white.png');
-$navbar-brand-logo-size:            90px auto;
+$navbar-brand-logo-size:            200px auto;
 $navbar-brand-border: (
     bottom: (
         size:                       1px,

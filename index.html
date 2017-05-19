@@ -67,28 +67,22 @@
         }
 
         .rqo-page-header-actions .btn-group {
-            /*padding-top: 10px;
-            padding-right: 5px;*/
-            height: 47px;
-            /*border-bottom: 0;*/
+            height: 47px;            
         }
 
         .rqo-page-header .nav-item .nav-link {
             color: #59326D;
-        }
-
-        .rqo-page-header .nav-item .nav-link,
-        .rqo-page-header .nav-tabs .nav-link.active,
-        .rqo-page-header .nav-tabs .navbar .active.dropdown-toggle,
-        .rqo-page-header .navbar .nav-tabs .active.dropdown-toggle {
             height: 48px;
             padding-top: 12px;
         }
 
         .rqo-page-header .nav-tabs .nav-link.active {
-            /*background: #f3f3f3;*/
             background: rgb(255, 248, 230);
             border-bottom: 0;
+        }
+
+        .rqo-page-header .nav-tabs .nav-link:hover {
+            background: #dbdee0;
         }
 
         .main .container-fluid {
@@ -103,10 +97,7 @@
             padding: 5px;
             white-space: nowrap;
         }
-        /*.rqo-page-header > div > ul > li:nth-child(1) > a{
-            border-left: 0;
-        }          */
-
+        
         input.form-control.form-control-sm,
         select.form-control.form-control-sm {
             height: 25px !important;
@@ -114,8 +105,7 @@
             font-weight: lighter;
         }
 
-        .action-btn {
-            /*min-width: 80px;*/
+        .action-btn {        
             font-size: smaller;            
         }
 
@@ -130,13 +120,13 @@
 
     <!--header-->
     <header class="app-header navbar">
-        <button class="navbar-toggler mobile-sidebar-toggler hidden-lg-up" type="button">☰2</button>
+        <button class="navbar-toggler mobile-sidebar-toggler hidden-lg-up" type="button">☰</button>
         <a class="navbar-brand" href="#">
-            <img src="img/rqo-logo-white.png" style="height: 30px;" class="m-t-1">
+            <!--<img src="img/rqo-logo-white.png" style="height: 30px;" class="m-t-1">-->
         </a>                
         <ul class="nav navbar-nav hidden-md-down">
             <li class="nav-item">
-                <a class="nav-link navbar-toggler sidebar-toggler" href="#">☰1</a>
+                <a class="nav-link navbar-toggler sidebar-toggler" href="#">☰</a>
             </li>
         </ul>
         <!--search form-->
@@ -528,7 +518,7 @@
             </div>
             
             <!--summary-->
-            <div class="page-summary hidden-xs-down">
+            <div class="page-summary ">
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="row">
@@ -542,14 +532,14 @@
                             <div class="col-6 col-md-9 pl-0">Biff Tanner</div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-4 hidden-sm-down">
+                    <div class="col-sm-12 col-md-6 col-lg-4 hidden-md-down">
                         <div class="row">
                             <div class="col-6 col-md-3"><span class="text-muted">Region :</span></div>
                             <div class="col-6 col-md-9 pl-0">01 - Admin</div>
                         </div>
                     </div>
 
-                    <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-sm-12 col-md-6 col-lg-4 hidden-sm-down">
                         <div class="row">
                             <div class="col-6 col-md-3"><span class="text-muted">Property :</span></div>
                             <div class="col-6 col-md-9 pl-0">100 East Main St Frisco, TX 75033</div>
@@ -561,7 +551,7 @@
                             <div class="col-6 col-md-9 pl-0">Calvin Klein</div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-4 hidden-sm-down">
+                    <div class="col-sm-12 col-md-6 col-lg-4 hidden-md-down">
                         <div class="row">
                             <div class="col-6 col-md-3"><span class="text-muted">Branch :</span></div>
                             <div class="col-6 col-md-9 pl-0">02 - Accounting</div>
