@@ -23,7 +23,7 @@
     <style>
         .dropdown-menu {
             margin-top: 15px;
-        }
+        }        
 
         .card-header {
             padding: 5px;
@@ -42,11 +42,7 @@
             padding-left: 15px;
             padding-right: 15px;
             margin-bottom: 0;
-        }
-
-        .card {
-            min-height: 330px;
-        }
+        }        
 
         ul.nav.nav-tabs {
             height: 47px;
@@ -101,8 +97,7 @@
         input.form-control.form-control-sm,
         select.form-control.form-control-sm {
             height: 25px !important;
-            font-size: smaller;
-            font-weight: lighter;
+            font-size: smaller;            
         }
 
         .action-btn {        
@@ -111,6 +106,10 @@
 
         .panel-btn {
             font-size: smaller;            
+        }
+
+        .card {
+            min-height: 330px;
         }
     </style>
 
@@ -506,6 +505,21 @@
                         </li>
                     </ul>
                 </div>
+                
+                <div class="dropdown hidden-sm-up d-flex flex-row">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height:47px">
+                        Property
+                    </button>
+                    <div class="dropdown-menu mt-0" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">File</a>
+                        <a class="dropdown-item" href="#">Buyer</a>
+                        <a class="dropdown-item" href="#">Seller</a>
+                        <a class="dropdown-item" href="#">Contacts</a>
+                        <a class="dropdown-item" href="#">Sale</a>
+                        <a class="dropdown-item" href="#">Property</a>
+                    </div>
+                </div>
+
                 <div class="rqo-page-header-actions">
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <button type="button" class="btn btn-sm btn-secondary action-btn"><i class="fa fa-save"></i><span class="hidden-md-down"> Save</span></button>
