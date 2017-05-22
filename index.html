@@ -18,9 +18,16 @@
     <link href="css/simple-line-icons.css" rel="stylesheet">
 
     <!-- Main styles for this application -->
+
     <link href="css/style.css" rel="stylesheet">
 
     <style>
+
+        .main .container-fluid {
+            padding: 10px 20px;
+             overflow-y: auto;              
+        }
+
         .dropdown-menu {
             margin-top: 15px;
         }        
@@ -33,7 +40,7 @@
             padding: 10px;
         }
 
-        fieldset>label {
+        fieldset > label {
             margin-bottom: 1px;
             font-size: smaller;
         }
@@ -44,52 +51,41 @@
             margin-bottom: 0;
         }        
 
-        ul.nav.nav-tabs {
-            height: 47px;
+        .page-header {
+            height: 48px;            
+            border-top: 1px solid #dbdee0;                        
+            border-bottom: 1px solid #dbdee0;                        
+            background-color: #e9ebec;            
         }
 
-        .order-summary {
-            border-bottom: 1px solid #dbdee0;
+        .page-header .nav-tabs {
+             margin-top: -1px;
         }
 
-        .rqo-page-header {
-            height: 47px;
-            border-bottom: 1px solid #dbdee0;
-            background-color: #e9ebec;
-        }
-
-        .rqo-page-header-tabs {
-            padding-right: 0;
-        }
-
-        .rqo-page-header-actions .btn-group {
-            height: 47px;            
-        }
-
-        .rqo-page-header .nav-item .nav-link {
+        .page-header .nav-item .nav-link {
             color: #59326D;
             height: 48px;
-            padding-top: 12px;
-        }
-
-        .rqo-page-header .nav-tabs .nav-link.active {
-            background: rgb(255, 248, 230);
-            border-bottom: 0;
-        }
-
-        .rqo-page-header .nav-tabs .nav-link:hover {
+            padding-top: 12px;            
+        }        
+        
+        .page-header .nav-tabs .nav-link:hover {
             background: #dbdee0;
         }
 
-        .main .container-fluid {
-            padding: 10px 20px;
-        }
-
-        .page-summary {
+        .page-header .nav-tabs .nav-link.active {            
             background: rgb(255, 248, 230);
-            border-bottom: 1px solid #dbdee0;
+            border-top: 1px solid rgb(255, 248, 230);                        
+            border-bottom: 1px solid #dbdee0;                        
+        }
+        
+        .page-header .btn-group {
+            height: 47px;                        
+        }
+        
+        .page-summary {
+            background: rgb(255, 248, 230);            
             font-size: smaller;
-            min-height: 47px;
+            min-height: 46px;
             padding: 5px;
             white-space: nowrap;
         }
@@ -102,17 +98,46 @@
 
         .action-btn {        
             font-size: smaller;            
+            display: flex;
+            flex-direction: column;            
+            align-items: center;            
+            padding-top: 10px;
+            min-width: 60px;                  
+        }
+
+        .action-btn i { 
+            padding-bottom: 3px;
+        }
+
+        .page-header .btn-group .action-btn {
+            border-top:0;                        
         }
 
         .panel-btn {
             font-size: smaller;            
         }
-
+        
         .card {
             min-height: 330px;
         }
-    </style>
 
+        .op-10 {
+            opacity: .10;
+        }        
+        .op-25 {
+            opacity: .25;
+        }        
+        .op-50 {
+            opacity: .50;
+        }        
+        .op-75 {
+            opacity: .75;
+        }   
+
+        footer .btn-group .btn {
+            flex:1;
+        }     
+    </style>
 </head>
 
 <body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
@@ -481,56 +506,6 @@
         <!-- Main content -->
         <main class="main">
 
-            <div class="d-flex flex-row justify-content-between rqo-page-header">
-                <div class="rqo-page-header-tabs pl-0 hidden-xs-down">
-
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link border-left-0 active" data-toggle="tab" href="#home" role="tab" aria-controls="home">File</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Buyer</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Seller</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Contacts</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Sale</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Property</a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="dropdown hidden-sm-up d-flex flex-row">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height:47px">
-                        Property
-                    </button>
-                    <div class="dropdown-menu mt-0" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">File</a>
-                        <a class="dropdown-item" href="#">Buyer</a>
-                        <a class="dropdown-item" href="#">Seller</a>
-                        <a class="dropdown-item" href="#">Contacts</a>
-                        <a class="dropdown-item" href="#">Sale</a>
-                        <a class="dropdown-item" href="#">Property</a>
-                    </div>
-                </div>
-
-                <div class="rqo-page-header-actions">
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-sm btn-secondary action-btn"><i class="fa fa-save"></i><span class="hidden-md-down"> Save</span></button>
-                        <button type="button" class="btn btn-sm btn-secondary action-btn "><i class="fa fa-bank"></i><span class="hidden-md-down"> CM</span></button>
-                        <button type="button" class="btn btn-sm btn-secondary action-btn "><i class="fa fa-magic"></i><span class="hidden-md-down"> Template</span></button>
-                        <button type="button" class="btn btn-sm btn-secondary action-btn "><i class="fa fa-refresh"></i><span class="hidden-md-down"> HUD</span></button>
-                        <button type="button" class="btn btn-sm btn-secondary action-btn "><i class="fa fa-list-alt"></i><span class="hidden-md-down"> Audit</span></button>
-                    </div>
-                </div>
-            </div>
-            
             <!--summary-->
             <div class="page-summary ">
                 <div class="row">
@@ -576,12 +551,46 @@
                         </div>
                         
                     </div>
-                    <div class="col col-2">                        
+                    <div class="col col-2 op-10">                        
                         <i onClick="javascript: alert('Are you sure you want to unlock this file?')" class="pull-right text-secondary fa fa-lock fa-3x"></i>
                     </div>    
                 </div>
             </div>
-
+            
+            <!--tabs-->
+            <div class="d-flex flex-row justify-content-between page-header">                
+                <div class="pl-0 hidden-xs-down">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link border-left-0 active" data-toggle="tab" href="#home" role="tab" aria-controls="home">File</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Buyer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Seller</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Sale</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Property</a>
+                        </li>
+                    </ul>
+                </div>
+                                
+                <div class="btn-group hidden-sm-down" role="group">
+                    <button type="button" class="btn btn-sm btn-secondary action-btn"><i class="fa fa-save"></i><span>Save</span></button>
+                    <button type="button" class="btn btn-sm btn-secondary action-btn"><i class="fa fa-bank"></i><span>CM</span></button>
+                    <button type="button" class="btn btn-sm btn-secondary action-btn"><i class="fa fa-magic"></i><span>Template</span></button>
+                    <button type="button" class="btn btn-sm btn-secondary action-btn"><i class="fa fa-refresh"></i><span>HUD</span></button>
+                    <button type="button" class="btn btn-sm btn-secondary action-btn"><i class="fa fa-list-alt"></i><span>Audit</span></button>
+                </div>
+            </div>
+                       
             <div class="container-fluid">                
 
                 <div class="row">
@@ -1156,10 +1165,30 @@
     </div>
 
     <!--footer-->
-    <footer class="app-footer">
+    <!--<footer class="app-footer">
         <a href="https://ramquest.com ">RQO</a> © 2017
         <span class="float-right ">Powered by <a href="https://rqo.ramquest.com ">RamQuest</a></span>
-    </footer>
+    </footer>-->
+
+    <!--<footer class="navbar-fixed-bottom">
+        <div class="btn-group" role="group" aria-label="Basic example" style="min-width: 100%;align-items:stretch;">
+            <button type="button" class="btn btn-sm btn-secondary action-btn"><i class="fa fa-save"></i><span>Save</span></button>
+            <button type="button" class="btn btn-sm btn-secondary action-btn "><i class="fa fa-bank"></i><span>CM</span></button>
+            <button type="button" class="btn btn-sm btn-secondary action-btn "><i class="fa fa-magic"></i><span>Template</span></button>
+            <button type="button" class="btn btn-sm btn-secondary action-btn "><i class="fa fa-refresh"></i><span>HUD</span></button>
+            <button type="button" class="btn btn-sm btn-secondary action-btn "><i class="fa fa-list-alt"></i><span>Audit</span></button>
+        </div>
+    </footer>          -->
+
+    <footer class="navbar fixed-bottom navbar-light bg-faded p-0 hidden-md-up">
+        <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-sm btn-secondary action-btn"><i class="fa fa-save"></i><span>Save</span></button>
+                <button type="button" class="btn btn-sm btn-secondary action-btn "><i class="fa fa-bank"></i><span>CM</span></button>
+                <button type="button" class="btn btn-sm btn-secondary action-btn "><i class="fa fa-magic"></i><span>Template</span></button>
+                <button type="button" class="btn btn-sm btn-secondary action-btn "><i class="fa fa-refresh"></i><span>HUD</span></button>
+                <button type="button" class="btn btn-sm btn-secondary action-btn "><i class="fa fa-list-alt"></i><span>Audit</span></button>
+            </div>
+    </footer>      
 
     <!-- Bootstrap and necessary plugins -->
     <script src="js/jquery.min.js "></script>
